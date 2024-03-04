@@ -17,14 +17,13 @@ body {
 }
 
 img {
-  display: block;
   max-width: 100%;
+  display: block;
 }
 
 /* Style rules for mobile viewport */
 
 /* Style rules to show mobile class and hide tab-desk class */
-
 .mobile {
   display: block;
 }
@@ -33,7 +32,13 @@ img {
   display: none;
 }
 
-header h1, h3 {
+
+/* Style rules for header area */
+header{
+  padding: 0%;
+}
+
+h1, h3 {
   padding: 2%;
   text-align: center;
 }
@@ -45,8 +50,6 @@ h1 {
 h3 {
     font-family: "Lora", serif;
 }
-
-/* Style rules for header area */
 
 nav {
   background-color: #2a1f14;
@@ -137,27 +140,12 @@ main ul {
   font-style: normal;
 }
 
-.google-maps {
-  position: relative;
-  padding-bottom: 75%; // This is the aspect ratio
-  height: 0;
-  overflow: hidden;
-}
-.google-maps iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+/* <uniquifier>: Use a uniquifier for the class name
+ <weight>: Use a value from 400 to 700 */
 
-// <uniquifier>: Use a uniquifier for the class name
-// <weight>: Use a value from 400 to 700
-
-.lora-<uniquifier> {
+.lora {
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: <400>;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -174,3 +162,77 @@ footer a {
   color: #f3e6d8;
   text-decoration: none;
 }
+
+/* Media Query for Tablet Viewport */ 
+@media screen and (min-width: 630px), print{
+
+  /* Tablet Viewport: Show tab-desk class, hide mobile class*/
+  .tab-desk {
+    display: block
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  /* Tablet Viewport: Style rules for nav area */
+  nav li {
+    border-top: none;
+    display: inline-block;
+    font-size: 1.25em;
+  }
+
+  nav li a{
+    padding: 0.5em;
+  }
+
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px), print{
+
+  /* Desktop Viewport: Style rules for nav area */
+  nav li{
+    font-size: 1.5em;
+  }
+
+  nav li a{
+    padding: 0.5em 1.5em;
+  }
+
+  nav li a:hover{
+    color: #2a1f14;
+    background-color: #f6eee4;
+  }
+
+  /* Desktop Viewport: Style rules for main content */
+  #info ul{
+    margin-left: 5%;
+  }
+
+}
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px), print{
+  body{
+    background: linear-gradient(#f6eee4, #78593a);
+  }
+
+#wrapper{
+  width: 1920px;
+  margin: 0 auto;
+}
+
+main{
+  background-color: #f6eee4;
+}
+
+}
+
+@media print{
+  body{
+    background-color: white;
+    color: black;
+  }
+}
+
