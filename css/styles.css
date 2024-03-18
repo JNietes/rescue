@@ -28,7 +28,7 @@ img {
   display: block;
 }
 
-.tab-desk {
+.tab-desk, .desktop {
   display: none;
 }
 
@@ -221,6 +221,14 @@ footer a {
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 1000px), print{
 
+  .mobile-tablet {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
   /* Desktop Viewport: Style rules for nav area */
   nav li{
     font-size: 1.5em;
@@ -249,6 +257,34 @@ footer a {
   aside {
     grid-column: 1 / span 3;
     font-size: 2em;
+  }
+
+  /* Style rules for table */
+  table {
+    border: 1px solid #2a1f14;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1%;
+  }
+
+  th, td {
+    border: 1px solid #2a1f14;
+    padding: 1%;
+  }
+
+  th {
+    background-color: #2a1f14;
+    color: #fff;
+    font-size: 1.15em;
+  }
+
+  tr:nth-child(odd){
+    background-color: #deccba;
   }
 
 }
